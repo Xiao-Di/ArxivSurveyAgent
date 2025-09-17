@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  # 主应用服务
+  literature-review-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: literature-review-backend
+    ports:
+      - "0.0.0.0:8000:8000"
+    environment:
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - DEBUG=${DEBUG:-false}
+      - LLM_PROVIDER=${LLM_PROVIDER:-deepseek}
+      - UVICORN_WORKERS=${UVICORN_WORKERS:-2}
+      - CHROMA_PERSIST_DIRECTORY=/app/data/chroma_db
+      - OUTPUT_DIR=/app/data/outputs
+      - REDIS_URL=redis://redis:6379
+      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - SEMANTIC_SCHOLAR_API_KEY=${SEMANTIC_SCHOLAR_API_KEY}
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./config/.env:/app/.env:ro
+    depends_on:
+      - redis
+    restart: unless-stopped
+    networks:
+      - literature-review-network
+
+  # Redis 缓存服务
+  redis:
+    image: redis:7-alpine
+    container_name: literature-review-redis
+    ports:
+      - "127.0.0.1:6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes --maxmemory 512mb --maxmemory-policy allkeys-lru
+    restart: unless-stopped
+    networks:
+      - literature-review-network
+
+# 网络配置
+networks:
+  literature-review-network:
+    driver: bridge
+
+# 持久化卷
+volumes:
+  redis_data:
+    driver: local
