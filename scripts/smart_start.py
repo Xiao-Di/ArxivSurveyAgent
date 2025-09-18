@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Tsearch 智能启动脚本
+PaperSurveyAgent 智能启动脚本
 根据功能开关配置启动相应的服务
 """
 
@@ -165,7 +165,7 @@ class SmartStarter:
 
     def show_status(self) -> None:
         """显示当前配置状态"""
-        print("📊 Tsearch 功能状态")
+        print("📊 PaperSurveyAgent 功能状态")
         print("=" * 40)
 
         # 核心功能
@@ -221,7 +221,7 @@ class SmartStarter:
 
 def main():
     """主函数"""
-    parser = argparse.ArgumentParser(description="Tsearch 智能启动工具")
+    parser = argparse.ArgumentParser(description="PaperSurveyAgent 智能启动工具")
     parser.add_argument("--mode", choices=["docker", "local", "status"],
                         default="status", help="启动模式")
     parser.add_argument("--env", choices=["development", "production"],
@@ -233,7 +233,7 @@ def main():
 
     starter = SmartStarter(args.project_root)
 
-    print(f"🚀 Tsearch 智能启动工具")
+    print(f"🚀 PaperSurveyAgent 智能启动工具")
     print(f"📁 项目根目录: {args.project_root}")
     print(f"🎯 模式: {args.mode}")
     print("=" * 50)

@@ -118,7 +118,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(
     title="AI Literature Review API",
     description="智能文献综述系统 API",
-    version="3.1.0",
+    version="1.1",
     lifespan=lifespan,
 )
 
@@ -329,7 +329,7 @@ async def root():
     """根路径"""
     return {
         "message": "AI Literature Review Agent API",
-        "version": "3.1.0",
+        "version": "1.1",
         "status": "running",
     }
 
@@ -665,7 +665,7 @@ async def health_check():
             "timestamp": datetime.now().isoformat(),
             "agent_status": agent_status,
             "auth_status": auth_status,
-            "version": "3.1.0",
+            "version": "1.1",
             "services": {
                 "api": "running",
                 "agent": agent_status,

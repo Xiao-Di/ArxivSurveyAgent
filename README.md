@@ -1,5 +1,6 @@
 # 🔍 PaperSurveyAgent - AI Literature Discovery Engine
 
+[![Version](https://img.shields.io/badge/Version-1.1-blue.svg)](#)
 [![Python](https://img.shields.io/badge/Python-3.12+-blue.svg)](https://www.python.org/downloads/)
 [![Vue.js](https://img.shields.io/badge/Vue.js-3.0+-green.svg)](https://vuejs.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-red.svg)](https://fastapi.tiangolo.com/)
@@ -7,7 +8,7 @@
 [![DeepSeek](https://img.shields.io/badge/Powered_by-DeepSeek-orange.svg)](https://platform.deepseek.com/)
 [![Status](https://img.shields.io/badge/Status-Fully_Operational-brightgreen.svg)](#)
 
-> **AI-powered literature discovery and review generation platform** | **Created by Di**
+> **AI-powered literature discovery and review generation platform v1.1** | **Created by Di**
 
 PaperSurveyAgent is an intelligent literature discovery engine that leverages advanced AI technologies to streamline academic research. It combines natural language processing, vector search, and automated analysis to help researchers find, analyze, and synthesize academic literature efficiently.
 
@@ -16,11 +17,14 @@ PaperSurveyAgent is an intelligent literature discovery engine that leverages ad
 - **🔍 Smart Search**: Natural language queries with intelligent paper discovery using ArXiv integration
 - **🤖 AI Analysis**: Automated content analysis and trend identification powered by DeepSeek Reasoner
 - **📊 Report Generation**: One-click literature review and summary creation with enhanced abstracts
+- **👥 User System**: Complete user authentication and account management with JWT tokens
+- **💳 Payment Integration**: User balance system with recharge functionality and usage tracking
 - **🌐 Multi-Source**: Primary integration with arXiv (Semantic Scholar support planned)
 - **⚡ Real-time**: Fast, responsive web interface with live updates
 - **🧠 Advanced AI**: DeepSeek Reasoner model with reasoning process logging
 - **📈 Vector Search**: ChromaDB-powered semantic search and similarity matching
 - **🔄 Robust Processing**: Comprehensive error handling and graceful degradation
+- **💰 Affordable Pricing**: 0.1 yuan per paper with minimum 0.5 yuan consumption
 
 ## 🚀 Quick Start
 
@@ -37,8 +41,8 @@ PaperSurveyAgent is an intelligent literature discovery engine that leverages ad
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/tsearch.git
-   cd tsearch
+   git clone https://github.com/yourusername/paper-survey-agent.git
+   cd paper-survey-agent
    ```
 
 2. **Set up Python environment**
@@ -166,12 +170,15 @@ curl -X POST "http://localhost:8000/api/quick-search" \
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: Vue 3, TypeScript, Tailwind CSS, Element Plus
-- **Backend**: FastAPI, Python 3.12+, Pydantic, Uvicorn
+- **Frontend**: Vue 3, TypeScript, Tailwind CSS, Element Plus, Pinia
+- **Backend**: FastAPI, Python 3.12+, Pydantic, Uvicorn, SQLAlchemy
 - **AI/ML**: DeepSeek Reasoner API, Sentence Transformers, ChromaDB, spaCy
+- **Database**: SQLite (user data), ChromaDB (vector storage), Redis (caching)
+- **Authentication**: JWT tokens, OAuth2 password flow, bcrypt password hashing
 - **Data Sources**: arXiv API (primary), Semantic Scholar API
 - **Processing**: PyPDF2, NLTK, Pandas, NumPy
-- **Deployment**: Docker, Docker Compose
+- **Payment**: Balance system with Alipay integration
+- **Deployment**: Docker, Docker Compose, Nginx
 - **Development**: pytest, coverage, flake8, mypy
 
 ## 📝 API Documentation
@@ -233,6 +240,24 @@ python start_api_server.py
 - **Network**: Stable internet connection required for API calls
 - **Storage**: Allow 1GB+ for vector database and cache files
 
+## 📋 Version History
+
+### v1.1 (Current)
+- **Added**: Complete user authentication system with JWT tokens
+- **Added**: User balance and payment system with recharge functionality
+- **Added**: SQLite database for user management and payment tracking
+- **Improved**: QR code integration for Alipay payments
+- **Enhanced**: Error handling with specific balance insufficient messages
+- **Reduced**: Pricing from 0.5 yuan/paper to 0.1 yuan/paper
+- **Fixed**: Authentication issues and user registration/login flow
+
+### v1.0
+- **Initial Release**: Core AI literature discovery and analysis features
+- **Implemented**: DeepSeek Reasoner integration for content analysis
+- **Added**: ArXiv API integration for paper retrieval
+- **Built**: Vue 3 frontend with Element Plus UI
+- **Created**: FastAPI backend with comprehensive error handling
+- **Integrated**: ChromaDB for vector search and semantic matching
 
 ## 📄 License
 

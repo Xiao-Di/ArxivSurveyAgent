@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Tsearch System Health Check Tool
+PaperSurveyAgent System Health Check Tool
 Check frontend-backend connectivity, environment configuration, API connections, etc.
 """
 
@@ -57,7 +57,7 @@ class SystemHealthChecker:
         
     async def run_all_checks(self):
         """Run all health checks"""
-        print_colored('[START] Tsearch System Health Check Started', Colors.HEADER)
+        print_colored('[START] PaperSurveyAgent System Health Check Started', Colors.HEADER)
         print_colored(f'[INFO] Project Root Directory: {PROJECT_ROOT}', Colors.OKCYAN)
         
         checks = [

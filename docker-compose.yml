@@ -138,7 +138,7 @@ services:
       - grafana_data:/var/lib/grafana
       - ./monitoring/grafana/dashboards:/etc/grafana/provisioning/dashboards:ro
     environment:
-      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD:-TsearchAdmin2024!}
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD:-PaperSurveyAgentAdmin2024!}
       - GF_USERS_ALLOW_SIGN_UP=false
     depends_on:
       - prometheus

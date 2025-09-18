@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Setup script for Tsearch project."""
+"""Setup script for PaperSurveyAgent project."""
 
 import os
 import subprocess
@@ -38,7 +38,7 @@ def check_python_version():
 
 def install_package():
     """Install the package in development mode."""
-    print("Installing Tsearch package...")
+    print("Installing PaperSurveyAgent package...")
     return run_command([sys.executable, "-m", "pip", "install", "-e", "."])
 
 
@@ -82,7 +82,7 @@ def create_directories():
 
 def create_example_env():
     """Create example environment file."""
-    env_content = """# Tsearch Configuration
+    env_content = """# PaperSurveyAgent Configuration
 # Copy this file to .env and customize for your setup
 
 # Core Settings
@@ -131,7 +131,7 @@ def run_tests():
 
 def main():
     """Main setup function."""
-    print("🚀 Setting up Tsearch project...")
+    print("🚀 Setting up PaperSurveyAgent project...")
     print("=" * 50)
 
     steps = [
@@ -166,7 +166,7 @@ def main():
         print("\n🎉 Next steps:")
         print("  1. Copy config/config.example.env to .env")
         print("  2. Add your API keys to .env")
-        print("  3. Run: tsearch --help")
+        print("  3. Run: papersurveyagent --help")
         print("  4. Or try: python -m lit_review_agent.cli --help")
 
     # Optionally run tests

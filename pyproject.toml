@@ -3,14 +3,14 @@ requires = ["hatchling>=1.21.0"]
 build-backend = "hatchling.build"
 
 [project]
-name = "tsearch"
+name = "paper-survey-agent"
 dynamic = ["version"]
 description = "AI智能文献综述与摘要生成系统 - AI Literature Review & Summary Generation System"
 authors = [
-    { name = "Tsearch Team", email = "tsearch@example.com" }
+    { name = "PaperSurveyAgent Team", email = "papersurveyagent@example.com" }
 ]
 maintainers = [
-    { name = "Tsearch Team", email = "tsearch@example.com" }
+    { name = "PaperSurveyAgent Team", email = "papersurveyagent@example.com" }
 ]
 license = { text = "MIT" }
 readme = "README.md"
@@ -104,14 +104,14 @@ dev = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/yourusername/tsearch"
-"Bug Reports" = "https://github.com/yourusername/tsearch/issues"
-"Source" = "https://github.com/yourusername/tsearch"
-"Documentation" = "https://tsearch.readthedocs.io/"
+"Homepage" = "https://github.com/yourusername/paper-survey-agent"
+"Bug Reports" = "https://github.com/yourusername/paper-survey-agent/issues"
+"Source" = "https://github.com/yourusername/paper-survey-agent"
+"Documentation" = "https://paper-survey-agent.readthedocs.io/"
 
 [project.scripts]
-tsearch = "lit_review_agent.cli:app"
-tsearch-server = "lit_review_agent.api_server:main"
+paper-survey-agent = "lit_review_agent.cli:app"
+paper-survey-agent-server = "lit_review_agent.api_server:main"
 
 
 [tool.hatch.version]

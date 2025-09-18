@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Tsearch - AI智能文献综述系统
+PaperSurveyAgent - AI智能文献综述系统
 一键启动脚本：同时启动后端API服务器和前端开发服务器
 """
 

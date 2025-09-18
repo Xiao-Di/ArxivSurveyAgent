@@ -82,7 +82,7 @@ CMD ["python", "-m", "uvicorn", "src.lit_review_agent.api_server:app", \
      "--workers", "${UVICORN_WORKERS:-1}"]
 
 # 元数据标签
-LABEL version="3.1.0" \
+LABEL version="1.1" \
       description="AI Agent for Literature Review and Summarization" \
       architecture="multi-stage" \
       components="Vue3+FastAPI+ChromaDB" \

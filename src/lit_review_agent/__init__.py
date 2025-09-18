@@ -7,7 +7,7 @@ that leverages multiple AI models and academic databases to conduct
 automated literature reviews and generate high-quality research summaries.
 """
 
-__version__ = "0.1.0"
+__version__ = "1.1"
 __author__ = "Di"
 __email__ = "di@example.com"
 __description__ = "AI智能文献综述与摘要生成系统"

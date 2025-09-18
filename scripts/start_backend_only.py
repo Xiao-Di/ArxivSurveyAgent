@@ -40,7 +40,7 @@ def get_venv_python():
 
 def start_backend():
     """启动后端服务"""
-    print_colored("🚀 启动 Tsearch 后端服务...", Colors.HEADER)
+    print_colored("🚀 启动 PaperSurveyAgent 后端服务...", Colors.HEADER)
     
     venv_python = get_venv_python()
     
@@ -109,7 +109,7 @@ def start_backend():
 def main():
     """主函数"""
     print_colored("=" * 60, Colors.HEADER)
-    print_colored("🔧 Tsearch 后端服务启动器", Colors.HEADER)
+    print_colored("🔧 PaperSurveyAgent 后端服务启动器", Colors.HEADER)
     print_colored("=" * 60, Colors.HEADER)
     print()
     
